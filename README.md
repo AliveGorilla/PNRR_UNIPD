@@ -36,6 +36,14 @@ The dataset generation pipeline is divided into **three main stages**:
 
 ---
 
+## ✍️ Data Annotation
+
+- **Manual labeling** was performed using [Label Studio](https://labelstud.io/).
+- Annotations include bounding boxes for schemas, compasses, windows, and balconies.
+- Labels were used to train both YOLO object detection models and ResNet direction classifier.
+
+---
+
 ## 📊 Sample Dataset Structure
 
 Below is an example of how the generated dataset is structured:
@@ -55,15 +63,37 @@ Below is an example of how the generated dataset is structured:
 
 ---
 
+## 📈 Results
+
+The models achieved strong performance across all stages of the pipeline:
+
+### 🧭 YOLO Models — Schema, Compass, Window & Balcony Detection
+
+| Metric             | Value |
+|--------------------|-------|
+| Precision          | 0.97  |
+| Recall             | 0.98  |
+| mAP50              | 0.99  |
+| mAP50-95           | 0.78  |
+
+*Evaluation performed on a held-out validation set using the Ultralytics YOLO implementation.*
+
+### 🧠 [ResNet18 — Direction (North, Center) Classification](https://github.com/AliveGorilla/PNRR_UNIPD/tree/main/compass_direction_train)
+
+- **Direction prediction accuracy**: ~98%
+
+This model classifies the North direction on cropped compass images, enabling reliable orientation mapping for windows and balconies.
+
+---
 
 ## 🛠️ Tech Stack
 
 - Python
-- PyTorch
-- YOLOv8 / YOLOv11 (for object detection)
-- ResNet18 (for direction classification)
+- [PyTorch](https://pytorch.org/)
+- [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) (for object detection)
+- ResNet18 via PyTorch (for direction classification)
 - OpenCV, NumPy, Matplotlib
-- Ultralytics 
+- [Label Studio](https://labelstud.io/) (for manual annotation)
 - PDF to Image Conversion tools
 
 ---
@@ -89,3 +119,5 @@ Below is an example of how the generated dataset is structured:
 ## 🤝 Contributions
 
 Pull requests are welcome. If you have suggestions or improvements, feel free to open an issue or fork the repository.
+
+
