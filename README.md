@@ -36,11 +36,25 @@ The dataset generation pipeline is divided into **three main stages**:
 
 ---
 
-## 📦 Output
+## 📊 Sample Dataset Structure
 
-- A labeled dataset of building elements (windows, balconies) with direction tags (`N`, `NE`, `E`, `SE`, `S`, `SW`, `W`, `NW`).
+Below is an example of how the generated dataset is structured:
+
+| File Name        | Window Directions    | # Windows | Balcony Directions | # Balconies | Error Code | Main Direction |
+|------------------|----------------------|-----------|---------------------|--------------|-------------|----------------|
+| house_001.jpg    | N, NE, E             | 3         | NE                  | 1            | 0           | N              |
+| house_002.jpg    | S, SW                | 2         | SW, W               | 2            | 1           | SW             |
+| house_003.jpg    | E, SE, S             | 3         | -                   | 0            | 0           | SE             |
+
+### ⚠️ Error Code Legend
+
+- **0** — No problem  
+- **1** — No plan was found AND no windows were found  
+- **2** — Plan was found BUT no compass was found  
+- **3** — Both compass and plan were found BUT no windows
 
 ---
+
 
 ## 🛠️ Tech Stack
 
