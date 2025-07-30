@@ -21,7 +21,7 @@ The dataset generation pipeline is divided into **three main stages**:
 
 ### 2. Detecting Windows and Balconies
 
-- Another [YOLO](https://github.com/ultralytics/ultralytics)* is applied to the **cropped schema** to detect:
+- Another [YOLO](https://github.com/ultralytics/ultralytics) is applied to the **cropped schema** to detect:
   - **Windows in** (windows inside of the living area).
   - **Windows out** (the rest).
   - **Balconies**.
