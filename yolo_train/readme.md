@@ -116,16 +116,15 @@ Replace `'yolo11l.pt'` with any custom checkpoint or YOLO variant like `yolov11n
 
 ### 🖼️ Graphs
 
-<div style="display: flex; justify-content: space-between; gap: 20px;">
-  <div style="text-align: center;">
-    <img src="/yolo_train/plans_detection_results/val_batch1_labels.jpg" alt="Plans Detection" width="400"/>
-    <p><strong>Plans Detection</strong></p>
-  </div>
-  <div style="text-align: center;">
-    <img src="/yolo_train/windows_detection_results/val_batch1_labels.jpg" alt="Windows Detection" width="300"/>
-    <p><strong>Windows Detection</strong></p>
-  </div>
-</div>
+<p align="center">
+  <img src="/yolo_train/plans_detection_results/val_batch1_labels.jpg" alt="Plans Detection" width="45%" />
+  <img src="/yolo_train/windows_detection_results/val_batch1_labels.jpg" alt="Windows Detection" width="45%" />
+</p>
+
+<p align="center">
+  <strong>Plans Detection</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Windows Detection</strong>
+</p>
 
 ---
 
