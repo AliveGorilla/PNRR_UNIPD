@@ -116,6 +116,11 @@ This model classifies the North direction on cropped compass images, enabling re
 
 ---
 
+### 🖼️ Example Visualization
+![](/example.png)
+
+---
+
 ## 🤝 Contributions
 
 Pull requests are welcome. If you have suggestions or improvements, feel free to open an issue or fork the repository.
