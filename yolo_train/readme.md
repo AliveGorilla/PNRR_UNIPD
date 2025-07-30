@@ -114,6 +114,12 @@ Replace `'yolo11l.pt'` with any custom checkpoint or YOLO variant like `yolov11n
 
 ---
 
+### 🖼️ Graphs
+![Plans Detection](/yolo_train/plans_detection_results/val_batch1_labels.jpg)
+![Plans Detection](/yolo_train/windows_detection_results/val_batch1_labels.jpg)
+
+---
+
 ## 📌 Notes
 
 - Uses the official [Ultralytics API](https://docs.ultralytics.com) for training and evaluation.
