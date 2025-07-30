@@ -122,7 +122,7 @@ Replace `'yolo11l.pt'` with any custom checkpoint or YOLO variant like `yolov11n
     <p><strong>Plans Detection</strong></p>
   </div>
   <div style="text-align: center;">
-    <img src="/yolo_train/windows_detection_results/val_batch1_labels.jpg" alt="Windows Detection" width="400"/>
+    <img src="/yolo_train/windows_detection_results/val_batch1_labels.jpg" alt="Windows Detection" width="300"/>
     <p><strong>Windows Detection</strong></p>
   </div>
 </div>
