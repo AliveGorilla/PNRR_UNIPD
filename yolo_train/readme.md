@@ -115,8 +115,17 @@ Replace `'yolo11l.pt'` with any custom checkpoint or YOLO variant like `yolov11n
 ---
 
 ### 🖼️ Graphs
-![Plans Detection](/yolo_train/plans_detection_results/val_batch1_labels.jpg)
-![Plans Detection](/yolo_train/windows_detection_results/val_batch1_labels.jpg)
+
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+  <div style="text-align: center;">
+    <img src="/yolo_train/plans_detection_results/val_batch1_labels.jpg" alt="Plans Detection" width="400"/>
+    <p><strong>Plans Detection</strong></p>
+  </div>
+  <div style="text-align: center;">
+    <img src="/yolo_train/windows_detection_results/val_batch1_labels.jpg" alt="Windows Detection" width="400"/>
+    <p><strong>Windows Detection</strong></p>
+  </div>
+</div>
 
 ---
 
