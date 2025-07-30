@@ -78,7 +78,7 @@ The models achieved strong performance across all stages of the pipeline:
 
 *Evaluation performed on a held-out validation set using the Ultralytics YOLO implementation.*
 
-### 🧠 ResNet18 — Direction (North) Classification
+### 🧠 [ResNet18 — Direction (North, Center) Classification](https://github.com/AliveGorilla/PNRR_UNIPD/tree/main/compass_direction_train)
 
 - **Direction prediction accuracy**: ~98%
 
