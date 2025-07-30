@@ -1,4 +1,4 @@
-<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/9b0c0607-6791-4dcc-a8ec-e6f248df0233" /># 🏠 House Facade Direction Dataset Generator
+🏠 House Facade Direction Dataset Generator
 
 This project aims to automatically generate a structured dataset of houses, their windows and balconies, and label them with their corresponding **cardinal direction** (e.g., North, East) based on the compass present in architectural schema files (usually in PDF format).
 
