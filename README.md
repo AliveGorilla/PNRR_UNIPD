@@ -1,4 +1,4 @@
-# 🏠 House Facade Direction Dataset Generator
+<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/9b0c0607-6791-4dcc-a8ec-e6f248df0233" /># 🏠 House Facade Direction Dataset Generator
 
 This project aims to automatically generate a structured dataset of houses, their windows and balconies, and label them with their corresponding **cardinal direction** (e.g., North, East) based on the compass present in architectural schema files (usually in PDF format).
 
@@ -67,7 +67,7 @@ Below is an example of how the generated dataset is structured:
 
 The models achieved strong performance across all stages of the pipeline:
 
-### 🧭 YOLO Models — Schema, Compass, Window & Balcony Detection
+### 🧭 [YOLO Models — Schema, Compass, Window & Balcony Detection](https://github.com/AliveGorilla/PNRR_UNIPD/tree/main/yolo_train)
 
 | Metric             | Value |
 |--------------------|-------|
