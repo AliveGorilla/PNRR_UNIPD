@@ -13,30 +13,32 @@ The dataset generation pipeline is divided into **three main stages**:
 ### 1. Detecting Schema and Compass from PDF
 
 - Input: PDF architectural files (converted to JPG during preprocessing).
-- A pretrained **YOLO model** is used to detect:
-  - The **building schema** area.
+- Train [YOLO](https://github.com/ultralytics/ultralytics) for object detection:
+  - The **inner schema** area.
+  - The **outside schema** area (major samples of the data have several floors in one file and not living areas are not in the scope of interes).
   - The **compass** area, indicating directions (usually a North arrow).
 - Outputs: Cropped schema and compass images.
 
 ### 2. Detecting Windows and Balconies
 
-- Another **YOLO model** is applied to the **cropped schema** to detect:
-  - **Windows**
-  - **Balconies**
+- Another [YOLO](https://github.com/ultralytics/ultralytics)* is applied to the **cropped schema** to detect:
+  - **Windows in** (windows inside of the living area).
+  - **Windows out** (the rest).
+  - **Balconies**.
 - The bounding boxes of these elements are extracted for directional labeling.
 
 ### 3. Estimating Compass Orientation with ResNet18
 
-- A **ResNet18** classification model is trained to predict the **North direction** on the cropped compass image.
+- A **ResNet18** classification model is trained to predict the **North direction** and **Compass center** on the cropped compass image.
+- Build 8 axis (North, North-West, South-West, etc.)
 - The predicted direction is projected onto the building schema.
-- Each detected **window** and **balcony** is assigned a direction label based on its position relative to the estimated North.
+- Each detected **Window in** and **Balcony** is assigned a direction label based on its position relative to the estimated North.
 
 ---
 
 ## 📦 Output
 
 - A labeled dataset of building elements (windows, balconies) with direction tags (`N`, `NE`, `E`, `SE`, `S`, `SW`, `W`, `NW`).
-- Optionally, annotated schema images for visual verification.
 
 ---
 
@@ -44,9 +46,10 @@ The dataset generation pipeline is divided into **three main stages**:
 
 - Python
 - PyTorch
-- YOLOv5 / YOLOv8 (for object detection)
+- YOLOv8 / YOLOv11 (for object detection)
 - ResNet18 (for direction classification)
 - OpenCV, NumPy, Matplotlib
+- Ultralytics 
 - PDF to Image Conversion tools
 
 ---
@@ -62,7 +65,7 @@ The dataset generation pipeline is divided into **three main stages**:
 
 ## 🚧 Future Work
 
-- Improve compass orientation classification accuracy.
+- Improve windwos/balcony detection accuracy.
 - Integrate support for multiple compass types and symbols.
 - Extend YOLO detection to doors or other facade elements.
 - Export final dataset in popular formats (e.g., COCO, CSV, GeoJSON).
