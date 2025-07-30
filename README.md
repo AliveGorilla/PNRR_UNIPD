@@ -73,8 +73,8 @@ The models achieved strong performance across all stages of the pipeline:
 |--------------------|-------|
 | Precision          | 0.97  |
 | Recall             | 0.98  |
-| mAP@0.5            | 0.99  |
-| mAP@0.5:0.95 (Bbox)| 0.78  |
+| mAP50              | 0.99  |
+| mAP50-95           | 0.78  |
 
 *Evaluation performed on a held-out validation set using the Ultralytics YOLO implementation.*
 
