@@ -74,4 +74,49 @@ The script will:
 >>> Final model saved to: output/yolo_11_windows/final.pt
 
 ? Evaluation results:
-  mAP50
+  mAP50:     0.9900
+  mAP50-95:  0.7800
+  Precision: 0.9700
+  Recall:    0.9800
+```
+
+---
+
+## ⚙️ Model Config
+
+Inside the script, you can adjust the following training parameters:
+
+```python
+model = YOLO('yolo11l.pt')  # Load pretrained model
+model.train(
+    seed=4,
+    epochs=100,
+    imgsz=640,
+    batch=32,
+    augment=True,
+    shear=10,
+    flipud=0.5,
+    fliplr=0.7,
+    ...
+)
+```
+
+Replace `'yolo11l.pt'` with any custom checkpoint or YOLO variant like `yolov11n.pt`, `yolov11m.pt`, etc.
+
+---
+
+## 📤 Output
+
+- Model checkpoints: `output/yolo_11_windows/weights/`
+- Final model: `final.pt`
+- Validation metrics printed to console
+- Logs saved in project directory
+
+---
+
+## 📌 Notes
+
+- Uses the official [Ultralytics API](https://docs.ultralytics.com) for training and evaluation.
+- Assumes YOLO-style annotations (one `.txt` file per image in `labels/`).
+
+---
