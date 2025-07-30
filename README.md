@@ -1,4 +1,4 @@
-🏠 House Facade Direction Dataset Generator
+## 🏠 House Facade Direction Dataset Generator
 
 This project aims to automatically generate a structured dataset of houses, their windows and balconies, and label them with their corresponding **cardinal direction** (e.g., North, East) based on the compass present in architectural schema files (usually in PDF format).
 
