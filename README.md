@@ -48,7 +48,7 @@ The dataset generation pipeline is divided into **three main stages**:
 
 Below is an example of how the generated dataset is structured:
 
-| File Name        | Window Directions    | # Windows | Balcony Directions | # Balconies | Error Code | Main Direction |
+| Address          | Window Directions    | # Windows | Balcony Directions | # Balconies | Error Code | Main Direction |
 |------------------|----------------------|-----------|---------------------|--------------|-------------|----------------|
 | house_001.jpg    | N, NE, E             | 3         | NE                  | 1            | 0           | N              |
 | house_002.jpg    | S, SW                | 2         | SW, W               | 2            | 1           | SW             |
